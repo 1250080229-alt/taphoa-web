@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tap hoa</title>
+    <style>
+        .nav-links {
+            list-style: none; /* bỏ dấu chấm */
+            padding: 0;
+            margin: 0;
+            display: flex; /* xếp cùng hàng */
+            gap: 20px; /* khoảng cách giữa các mục */
+            justify-content: flex-end;
+            background-color: lightgreen;
+            color:white;
+        }
+        a {
+            text-decoration: none; /* bỏ gạch chân */
+            color: black; /* màu chữ */
+            font-weight: bold;
+        }
+        #wp-products {
+            padding-top: 116px; /*Khoảng cách phía trên là 116px.*/
+            padding-right: 134px; /*Khoảng cách bên phải */
+            padding-left: 134px; /*Khoảng cách bên trái*/
+            padding-block: 78px; /*Khoảng cách trên và dưới của phần tử là 78px.*/
+        }
+
+            #wp-products h2 {
+                text-align: center; /* Căn giữa tiêu đề*/
+                margin-bottom: 76px; /*Tạo khoảng cách 76px phía dưới tiêu đề.*/
+                font-size: 32px; /*Đặt kích thước chữ là 32px.*/
+                color: #303030; /**/
+            }
+
+       
+
+            #list-products .item {
+                width: 290px; /* Mỗi sản phẩm có chiều rộng 290px*/
+                height: 430px; /*Mỗi sản phẩm có chiều cao 430px.*/
+                background: #000000; /**/
+                border-radius: 10px; /*Bo tròn các góc của hộp sản phẩm.*/
+                margin-bottom: 50px; /*Tạo khoảng cách 50px phía dưới mỗi sản phẩm.*/
+            }
+
+                #list-products .item img {
+                    width: 150px; /*ddawjt chiều rộng cốddịnh*/
+                    height: 150px; /*ddawjt chiều cao cốddijnh*/
+                    object-fit: cover; /* giữ tỷ lệ và cắt phần thừa*/
+                    margin: 0px auto; /*Căn giữa hình ảnh theo chiều ngang.*/
+                    margin-top: 17px; /*Tạo khoảng cách 17px phía trên ảnh.*/
+                    display: block; /*Đảm bảo hình ảnh được hiển thị như một phần tử khối (block) để căn giữa dễ dàng hơn*/
+                }
+
+                #list-products .item .name {
+                    text-align: center; /* Căn giữa tiêu đề*/
+                    color: #ff0000; /**/
+                    font-weight: bold; /*Đặt tên sản phẩm thành chữ đậm.*/
+                    margin-top: 21px; /*Khoảng cách trên là 21px.*/
+                    margin: 10px; /*Tạo khoảng cách 10px từ tất cả các phía của tên sản phẩm.*/
+                }
+
+                #list-products .item .desc {
+                    text-align: center; /* Căn giữa tiêu đề*/
+                    color: #ffffff; /**/
+                    margin: 10px; /*Khoảng cách 10px từ tất cả các phía của mô tả sản phẩm.*/
+                }
+      #list-products .item .price{
+    text-align: center;/* Căn giữa tiêu đề*/
+    color: #d60000;/**/
+    }
+    #list-products .item .mu-a{
+    background-color: #00aa7f;
+    color: white;
+    font-size: 16px;
+    border: none;/* Loại bỏ đường viền */
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;/* Nút chiếm toàn bộ chiều rộng của phần tử cha */
+    margin-top: 20px;
+    }
+    #list-products .item .mu-a:hover{/*hiệu ứng*/
+    color: #dcdc00;/* Màu chữ thay đổi*/
+    }
+ 
+
+            #list-products li {
+                display: flex; /*Sử dụng Flexbox để sắp xếp các sản phẩm.*/
+                list-style: none; /*Loại bỏ dấu chấm trong danh sách.*/
+                justify-content: space-around; /*Đảm bảo các phần tử trong danh sách được phân phối đều với khoảng cách giữa chúng.*/
+                flex-wrap: wrap; /*Cho phép các phần tử di chuyển sang dòng mới khi không đủ không gian.*/
+            }
+        footer {
+            background-color: lightgreen;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .navbar {
+            background-color: lightgreen;
+            color:white;
+            padding :10px;
+            
+        }
+        a {
+            color:white;
+            margin-right:10px;
+        }
+        h1{
+            margin:10px;
+        }
+    </style>
+ 
+</head>
+<body>
+
+
+    <div class="navbar">
+        <h1>TẠP HÓA </h1>
+        <div class="nav-links">
+
+            <a  href="#sanpham">Sản phẩm</a>
+            <a href="#khuyenmai">Khuyến mãi</a>
+            <a href="#lienhe">Liên hệ</a>
+        </div>
+    </div>
+    <hr />
+
+    <div id="wp-products">
+        <h2 id="sanpham">
+            THỰC PHẨM
+        </h2>
+
+        <ul id="list-products">
+            <li>
+                <div class="item">
+                    <img src="anhsp/gao.jpg" alt="">
+
+                    <div class="name">
+                        Gạo 5kg
+                    </div>
+                    <div class="desc">
+                        Gạo Hương Lài  cũng là giống lúa mùa được trồng nhiều ở vùng Cần Đước, Long An.Hạt gạo Hương Lài có màu trắng trong,hạt dài, cơm dẻo, mềm, ngọt cơm. Đặc biệt tỏa mùi rất thơm khi nấu. HSD: 6 tháng kể từ ngày đóng gói
+
+                    </div>
+                    <div class="price">
+                        100.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/dauan.jpg" alt="">
+
+                    <div class="name">
+                        Dầu ăn
+                    </div>
+                    <div class="desc">
+                        Dầu ăn Golden là nguồn cung cấp chất béo không có cholesterol lý tưởng, đảm bảo an toàn cho sức khỏe của bạn.Sản phẩm có màu sáng trong và mùi vị dịu nhẹ, có thể dùng đế chế biến nhiều món ăn bổ dưỡng.HSD: 24 tháng kể từ NSX.
+                    </div>
+                    <div class="price">
+                        40.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/botngot.jpg" alt="">
+
+                    <div class="name">
+                        Bột ngọt KNORR
+                    </div>
+                    <div class="desc">
+                        Hạt nêm Knorr thịt thăn-xương ống và tủy gói 900g là sự kết hợp tuyệt vời của nhiều nguyên liệu như: bột sắn, đường, mỡ, bột thịt và bột chiết xuất xương ống, tủy và thịt thăn... tạo thành loại gia vị nêm nếm thơm ngon, hấp dẫn.
+                    </div>
+                    <div class="price">
+                        43.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/duong.jpg" alt="">
+
+                    <div class="name">
+                        Đường
+                    </div>
+                    <div class="desc">
+                        Đường làm từ nguồn mía sạch tại việt nam ,không khoá chất, không chất tẩy trắng, xuất xứ rõ, ngọt,màu trắng được sản xuất tại Việt Nam.Dùng nấu ăn, nấu chè, dùng cho cá nhân, gia đình, quán, yên tâm tốt cho sức khoẻ.HSD:24 tháng
+                    </div>
+                    <div class="price">
+                        25.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/nuocmam.jpg" alt="">
+
+                    <div class="name">
+                        Nước mắm
+                    </div>
+                    <div class="desc">
+                        Nước chấm Đệ Nhị được sản xuất với thành phần chính là nước, muối, mắm, đường và chất điều vị. Sản phẩm này có thể được sử dụng để chấm các loại thực phẩm như thịt, cá, rau củ, bánh mì, trái cây,tôm... HSD: 12 tháng
+                    </div>
+                    <div class="price">
+                        23.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/mihaohao.jpg" alt="">
+
+                    <div class="name">
+                        Mì Hảo Hảo
+                    </div>
+                    <div class="desc">
+                        Mì Hảo Hảo được sản xuất trên dây chuyền khép kín, sử dụng công nghệ hiện đại cũng như nguyên liệu cao cấp nhất, dưới sự kiểm soát chặt chẽ, vì vậy từng vắt mì đều tuyệt đối đảm bảo chất lượng.HSD: 5 tháng kể từ NSX
+                    </div>
+                    <div class="price">
+                        4.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="wp-products">
+        <h2>
+            ĐỒ UỐNG
+        </h2>
+
+        <ul id="list-products">
+            <li>
+                <div class="item">
+                    <img src="anhsp/nuocsuoi.jpg" alt="">
+
+                    <div class="name">
+                        Nước suối
+                    </div>
+                    <div class="desc">
+                        Nước Aquafina được lấy từ nguồn nước ngầm đảm bảo, sau đó trải qua quy trình khử trùng, lọc sạch các tạp chất.Sản phẩm có tác dụng dịu cơn khát, khi uống sẽ có cảm giác hơi ngọt ở miệng, rất dễ uống.HSD: 24 tháng kể từ NSX
+                    </div>
+                    <div class="price">
+                        5.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/nuocngot.jpg" alt="">
+
+                    <div class="name">
+                        Nước có ga
+                    </div>
+                    <div class="desc">
+                        - Coca Lon 320ml
+                        - 7 Up 330ml
+                        - Pepsi Lon 320ml
+                        - Mirinda xá xị 320ml
+                        -  Sting dâu 330ML
+                        - Fanta Mix đủ vị 330ml
+                        - Sprite 330ml
+                        - Soda Schweppes 320ml
+                        - Bò Cụng REDBULL 150ml .
+                        HSD: 24 tháng
+                    </div>
+                    <div class="price">
+                        12.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/suamilo.jpg" alt="">
+
+                    <div class="name">
+                        Sữa milo
+                    </div>
+                    <div class="desc">
+                        Thức uống dinh dưỡng Milo với thành phần được chiết xuất dinh dưỡng vượt trội từ mầm lúa mạch nguyên cám, có tác dụng cung cấp nguồn năng lượng hoạt động lâu dài hơn cho việc học tập, chơi thể thao và các hoạt động thể chất.
+                    </div>
+                    <div class="price">
+                        29.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/suahopngoisao.jpg" alt="">
+
+                    <div class="name">
+                        Sữa hộp ngôi sao
+                    </div>
+                    <div class="desc">
+                        Sữa đặc Ngôi Sao Phương Nam được sử dụng rộng rãi để pha chế cà phê, sinh tố, làm bánh, làm yaourt... Nó góp phần tạo nên vị ngon đậm đà, sánh mịn cho mọi thức uống, biến tấu hương vị một cách tinh tế. HSD:24 tháng
+
+                    </div>
+                    <div class="price">
+                        20.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+
+                </div>
+                <div class="item">
+                    <img src="anhsp/traolong.jpg" alt="">
+
+                    <div class="name">
+                        Trà Ôlong
+                    </div>
+                    <div class="desc">
+                        Với hương vị ngọt nhẹ thanh mát, mùi thơm đặc trưng của trà ô long cùng hoạt chất OTTP giúp hạn chế hấp thu chất chéo. Trà ô long Tea + giúp làm lắng nhẹ những cơn ưu tư mang đến cảm giác nhẹ nhàng. HSD:24 tháng
+                    </div>
+                    <div class="price">
+                        12.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/suavinamilk.jpg" alt="">
+
+                    <div class="name">
+                        Sữa vinamilk
+                    </div>
+                    <div class="desc">
+                        Sữa tươi Vinamilk 220ml có đường, tiệt trùng từ 100% sữa tươi, thơm ngon, dễ uống, bổ sung dưỡng chất tốt cho xương và hệ miễn dịch.Thành phần	Sữa, dầu thực vật, vitamin (A, D3),.... Sản xuất tại	Việt Nam.HSD: 6 tháng
+                    </div>
+                    <div class="price">
+                        7.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="wp-products">
+        <h2>
+            ĐỒ ĂN VẶT
+        </h2>
+
+        <ul id="list-products">
+            <li>
+                <div class="item">
+                    <img src="anhsp/banhsnack.jpg" alt="">
+
+                    <div class="name">
+                        Bánh Snack
+                    </div>
+                    <div class="desc">
+                        Bánh O’Star là sản phẩm nổi bật từ thương hiệu Orion Hàn Quốc, làm từ khoai tây tươi, giòn tan và giữ nguyên hương vị tự nhiên. Được cam kết về chất lượng ,an toàn thực phẩm và an toàn cho người tiêu dùng.HSD: ngày trên bao bì.
+                    </div>
+                    <div class="price">
+                        5.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/keo.jpg" alt="">
+
+                    <div class="name">
+                        Kẹo
+                    </div>
+                    <div class="desc">
+                        Kẹo Dynamite món ăn vặt bán chạy tại các siêu thị lớn ở Việt Nam. Trong đó, kẹo nhai Dynamite với sự kết hợp giữa socola và bạc hà tạo ra hương vị độc đáo, thơm ngon, được nhiều người yêu thích. HSD: 12 tháng
+                    </div>
+                    <div class="price">
+                        15.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/banhgao.jpg" alt="">
+
+                    <div class="name">
+                        Báng gạo
+                    </div>
+                    <div class="desc">
+                        Bánh gạo giòn giòn, đậm vị, thơm ngon và lạ miệng, được chế biến từ 100% hạt gạo Japonica thơm ngon, tách vỏ trong 1 tháng. Sản phẩm đảm bảo chỉ sử dụng gạo nguyên chất, mang đến trải nghiệm ăn vặt thú vị.HSD: 6 tháng kể từ NSX
+                    </div>
+                    <div class="price">
+                        15.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="/anhsp/banhoreo.jpg" alt="">
+
+                    <div class="name">
+                        Bánh Oreo
+                    </div>
+                    <div class="desc">
+                        Sản phẩm là sự hòa quyện giữa vị đắng của socola với vị béo ngậy của kem sữa, mang đến hương vị thơm ngon, độc đáo, với vị ngọt hài hòa.Chứa nhiều thành phần hữu ích cho sức khỏe, thích hợp dùng làm bữa ăn nhẹ.HSD: 12 tháng.
+                    </div>
+                    <div class="price">
+                        20.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+
+                </div>
+                <div class="item">
+                    <img src="anhsp/kem.jpg" alt="">
+
+                    <div class="name">
+                        Kem
+                    </div>
+                    <div class="desc">
+                        Kem ốc quế là sự kết hợp hoàn hảo giữa sữa,socola, đường và bơ béo, mang đến hương vị thơm ngon, mát lạnh. Đây là món ăn lý tưởng để thưởng thức trong những ngày hè oi ả hoặc khi bạn cần một chút thư giãn.HSD : 06 tháng kể từ NSX.
+                    </div>
+                    <div class="price">
+                        12.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="wp-products">
+        <h2>
+            ĐỒ GIA DỤNG
+        </h2>
+
+        <ul id="list-products">
+            <li>
+                <div class="item">
+                    <img src="anhsp/omo.jpg" alt="">
+
+                    <div class="name">
+                        Bột giặt
+                    </div>
+                    <div class="desc">
+                        Công dụng: Xoáy bay vết bẩn cứng đầu cho áo quần trắng tinh tươm sau một lần vò ngay cả vết dầu mỡ, socola, dầu ăn, cà phê,... Mùi hương: Hương thơm tươi mới từ hạt lưu hương. Sử dụng cho:Giặt tay, giặt máy cửa trên. HSD:36 Tháng
+                    </div>
+                    <div class="price">
+                        32.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/nuocruachen.jpg" alt="">
+
+                    <div class="name">
+                        Nước rửa chén
+                    </div>
+                    <div class="desc">
+                        Nước Rửa Chén Sunlight Thiên Nhiên Lô Hội 100% gốc thực vật, với 100% thành phần làm sạch gốc thực vật. An toàn cho chén dĩa trẻ em cùng công thức phân hủy sinh học đến 99%, bao bì nhựa tái sinh thân thiên với môi trường.HSD:24 tháng
+                    </div>
+                    <div class="price">
+                        25.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/tuirac.jpg" alt="">
+
+                    <div class="name">
+                        Túi rác
+                    </div>
+                    <div class="desc">
+                        Túi rác dây rút được làm từ nhựa HDPE, có độ đàn hồi tốt, siêu nhẹ và chịu lực lên tới 10kg. Túi không thấm hóa chất và nước,chống ăn mòn,phù hợp để chứa nhiều loại rác thải như thức ăn thừa,vỏ chai, giúp bạn tiện lợi và an tâm sử dụng.
+                    </div>
+                    <div class="price">
+                        30.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="wp-products">
+        <h2 id="khuyenmai">
+            Giảm giá
+        </h2>
+
+        <ul id="list-products">
+            <li>
+                <div class="item">
+                    <img src="anhsp/gao.jpg" alt="">
+
+                    <div class="name">
+                        Gạo Hương Lài 5kg
+                    </div>
+                    <div class="desc">
+                        <s>  100.000vnd</s>
+                    </div>
+                    <div class="price">
+                        95.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/nuocngot.jpg" alt="">
+
+                    <div class="name">
+                        Các loại nước có ga
+                    </div>
+                    <div class="desc">
+                        <s>12.000vnd</s>
+                    </div>
+                    <div class="price">
+                        10.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/botngot.jpg" alt="">
+
+                    <div class="name">
+                        Bột ngọt KNORR
+                    </div>
+                    <div class="desc">
+                        <s>43.000vnd</s>
+                    </div>
+                    <div class="price">
+                        41.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/banhoreo.jpg" alt="">
+
+                    <div class="name">
+                        Bánh Oreo
+                    </div>
+                    <div class="desc">
+                        <s>20.000vnd</s>
+                    </div>
+                    <div class="price">
+                        15.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+                <div class="item">
+                    <img src="anhsp/omo.jpg" alt="">
+
+                    <div class="name">
+                        Bột giặt OMO
+                    </div>
+                    <div class="desc">
+                        <s>32.000vnd</s>
+                    </div>
+                    <div class="price">
+                        30.000vnd
+                    </div>
+                    <button class="mu-a">Mua ngay</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer id="lienhe">
+        <p>&copy; 2025 Tạp hóa | Liên hệ: support@taphoa.vn</p>
+
+    </footer>
+</body>
+</html>
